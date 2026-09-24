@@ -6,66 +6,98 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Intro Section</title>
 </head>
-<body>
-    <nav id="nav" class="flex justify-between px-5 py-7">
+<body class="md:grid md:grid-cols-2 gap-[50px]">
+    <nav id="nav" class="flex justify-between mb-7 col-start-1 col-span-2">
         <img src="images/logo.svg" 
         alt=""
-        class="w-[100px] h-[30px]"
+        class="w-[100px] h-[30px] ml-5 mt-7"
         >
-        <section id="hamburger" class="md:hidden">
+        <section id="hamburger" class="md:hidden mt-7 mr-5">
             <div class="w-[40px] h-[3px] bg-black mt-1 mb-1"></div>
             <div class="w-[40px] h-[3px] bg-black mb-1"></div>
             <div class="w-[40px] h-[3px] bg-black"></div>
         </section>
+        <div class="hidden md:flex items-start w-[80vw] justify-between">
+            <div class="flex mt-7">
+                <div class="flex-col">
+                    <button id="desktopFeatures" class="text-xl text-gray-500 hover:text-black flex items-center">Features <img src="images/icon-arrow-down.svg" alt="" class="h-[10px] ml-1 mr-3"></button>
+                    <div id="desktopFeaturesMenu" class="my-1 absolute bg-white rounded-2xl p-5 shadow-lg shadow-gray-500 hidden">
+                        <a href="" class="text-2xl text-gray-500 flex items-center my-4 hover:text-black"><img src="images/icon-todo.svg" alt="" class="h-[20px] mr-3"> Todo List</a>
+                        <a href="" class="text-2xl text-gray-500 flex items-center my-4 hover:text-black"><img src="images/icon-calendar.svg" alt="" class="h-[20px] mr-3"> Calendar</a>
+                        <a href="" class="text-2xl text-gray-500 flex items-center my-4 hover:text-black"><img src="images/icon-reminders.svg" alt="" class="h-[25px] mr-3"> Reminders</a>
+                        <a href="" class="text-2xl text-gray-500 flex items-center my-4 hover:text-black"><img src="images/icon-planning.svg" alt="" class="h-[20px] mr-3"> Planning</a>
+                    </div>
+                </div>
+                <div class="flex-col">
+                    <button id="desktopCompany" class="text-xl text-gray-500 hover:text-black flex items-center">Company <img src="images/icon-arrow-down.svg" alt="" class="h-[10px] ml-1 mr-3"></button>
+                    <div id="desktopCompanyMenu" class="my-1 absolute bg-white rounded-2xl p-5 shadow-lg shadow-gray-500 hidden">
+                        <a href="" class="text-2xl text-gray-500 flex items-center my-4 hover:text-black">History</a>
+                        <a href="" class="text-2xl text-gray-500 flex items-center my-4 hover:text-black">Our Team</a>
+                        <a href="" class="text-2xl text-gray-500 flex items-center my-4 hover:text-black">Blog</a>
+                    </div>
+                </div>
+                <a href="" class="text-xl text-gray-500 hover:text-black pe-5">Careers</a>
+                <a href="" class="text-xl text-gray-500 hover:text-black">About</a>
+            </div>
+            <div class="flex mt-5 mr-5">
+                <button class="h-[50px] text-gray-500 hover:text-black flex items-center justify-center text-xl cursor-pointer mr-5">Login</button>
+                <button class="h-[50px] text-gray-500 hover:text-black border-1 border-solid border-black cursor-pointer rounded-2xl flex items-center justify-center text-xl px-4">Register</button>
+            </div>
+        </div>
     </nav>
-    <div>
-        <img src="images/image-hero-mobile.png" alt="">
-    </div>
-    <div class="px-5 text-center mt-10">
-        <h1 class="text-[2.5rem] font-bold">Make remote work</h1>
-        <p class="text-gray-500 text-xl mt-7">
-            Get your team in sync, no matter your location. Streamline processes, create
-            team rituals, and watch productivity soar.
-        </p>
-        <div class="bg-black w-[150px] h-[50px] text-white font-bold hover:border-1 hover:border-solid hover:border-black rounded-2xl flex items-center justify-center text-xl my-7 hover:bg-white hover:text-black mx-auto cursor-pointer">
-            Learn more
-        </div>
-    </div>
-    <div class="flex justify-around mt-10">
-        <img src="images/client-databiz.svg" alt="" class="h-[20px]">
-        <img src="images/client-audiophile.svg" alt="" class="h-[30px]">
-        <img src="images/client-meet.svg" alt="" class="h-[20px]">
-        <img src="images/client-maker.svg" alt="" class="h-[20px]">
+
+    <div class="col-start-2 row-start-2 row-span-2 md:flex md:items-center md:justify-center md:mr-10">
+        <img src="images/image-hero-mobile.png" alt="" class="md:hidden">
+        <img src="images/image-hero-desktop.png" alt="" class="hidden md:flex h-[550px]">
     </div>
 
-    <div id="overlay"
-     class="hidden fixed inset-0 bg-black/50 z-40">
-    </div>
+    <div class="col-start-1 row-start-2 row-span-2 md:ml-10 lg:ml-30">
+        <div class="px-5 text-center mt-10 md:text-left">
+            <h1 class="text-[2.5rem] font-bold md:text-[4.5rem] 2xl:text-[5rem]">Make remote work</h1>
+            <p class="text-gray-500 text-xl mt-7">
+                Get your team in sync, no matter your location. Streamline processes, create
+                team rituals, and watch productivity soar.
+            </p>
+            <div class="bg-black w-[150px] h-[50px] text-white font-bold hover:border-1 hover:border-solid hover:border-black rounded-2xl flex items-center justify-center text-xl my-7 hover:bg-white hover:text-black mx-auto cursor-pointer md:mx-0">
+                Learn more
+            </div>
+        </div>
+        <div class="flex justify-around mt-10 md:mt-[70px]">
+            <img src="images/client-databiz.svg" alt="" class="h-[20px]">
+            <img src="images/client-audiophile.svg" alt="" class="h-[30px]">
+            <img src="images/client-meet.svg" alt="" class="h-[20px]">
+            <img src="images/client-maker.svg" alt="" class="h-[20px]">
+        </div>
 
-    <aside id="menu" class="h-[100vh] w-[70vw] absolute bg-white top-0 right-0 px-7 py-7 z-50 hidden">
-        <img src="images/icon-close-menu.svg" alt="" id="cancelMenu" class="h-[50px] absolute right-[20px]">
-        <div class="flex flex-col  justify-between mt-[90px]">
-            <button id="features" href="" class="text-2xl text-gray-500 flex items-center my-3">Features <img src="images/icon-arrow-down.svg" alt="" class="h-[10px] ml-3"></button>
-            <div id="featuresMenu" class="ml-5 my-1 hidden">
-                <a href="" class="text-2xl text-gray-500 flex items-center my-4"><img src="images/icon-todo.svg" alt="" class="h-[20px] mr-3"> Todo List</a>
-                <a href="" class="text-2xl text-gray-500 flex items-center my-4"><img src="images/icon-calendar.svg" alt="" class="h-[20px] mr-3"> Calendar</a>
-                <a href="" class="text-2xl text-gray-500 flex items-center my-4"><img src="images/icon-reminders.svg" alt="" class="h-[25px] mr-3"> Reminders</a>
-                <a href="" class="text-2xl text-gray-500 flex items-center my-4"><img src="images/icon-planning.svg" alt="" class="h-[20px] mr-3"> Planning</a>
-            </div>
-            <button id="company" href="" class="text-2xl text-gray-500 flex items-center my-3">Company <img src="images/icon-arrow-down.svg" alt="" class="h-[10px] ml-3"></button>
-            <div id="companyMenu" class="ml-5 my-1 hidden">
-                <a href="" class="text-2xl text-gray-500 flex items-center my-3">History</a>
-                <a href="" class="text-2xl text-gray-500 flex items-center my-3">Our Team</a>
-                <a href="" class="text-2xl text-gray-500 flex items-center my-3">Blog</a>
-            </div>
-            <a href="" class="text-2xl text-gray-500 my-3">Careers</a>
-            <a href="" class="text-2xl text-gray-500 my-3">About</a>
+        <div id="overlay"
+        class="hidden fixed inset-0 bg-black/50 z-40">
         </div>
-        <div>
-            <div class="w-[70%] h-[50px] text-gray-500 hover:text-black rounded-2xl flex items-center justify-center text-2xl my-7 mx-auto cursor-pointer">Login</div>
-            <div class="w-[70%] h-[50px] text-gray-500 hover:text-black border-1 border-solid border-black cursor-pointer rounded-2xl flex items-center justify-center text-2xl my-7 mx-auto">Register</div>
-        </div>
-    </aside>
+
+        <aside id="menu" class="h-[100vh] w-[70vw] absolute bg-white top-0 right-0 px-7 py-7 z-50 hidden">
+            <img src="images/icon-close-menu.svg" alt="" id="cancelMenu" class="h-[50px] absolute right-[20px]">
+            <div class="flex flex-col  justify-between mt-[90px]">
+                <button id="features" class="text-2xl text-gray-500 flex items-center my-3">Features <img src="images/icon-arrow-down.svg" alt="" class="h-[10px] ml-3"></button>
+                <div id="featuresMenu" class="ml-5 my-1 hidden">
+                    <a href="" class="text-2xl text-gray-500 flex items-center my-4"><img src="images/icon-todo.svg" alt="" class="h-[20px] mr-3"> Todo List</a>
+                    <a href="" class="text-2xl text-gray-500 flex items-center my-4"><img src="images/icon-calendar.svg" alt="" class="h-[20px] mr-3"> Calendar</a>
+                    <a href="" class="text-2xl text-gray-500 flex items-center my-4"><img src="images/icon-reminders.svg" alt="" class="h-[25px] mr-3"> Reminders</a>
+                    <a href="" class="text-2xl text-gray-500 flex items-center my-4"><img src="images/icon-planning.svg" alt="" class="h-[20px] mr-3"> Planning</a>
+                </div>
+                <button id="company" class="text-2xl text-gray-500 flex items-center my-3">Company <img src="images/icon-arrow-down.svg" alt="" class="h-[10px] ml-3"></button>
+                <div id="companyMenu" class="ml-5 my-1 hidden">
+                    <a href="" class="text-2xl text-gray-500 flex items-center my-3">History</a>
+                    <a href="" class="text-2xl text-gray-500 flex items-center my-3">Our Team</a>
+                    <a href="" class="text-2xl text-gray-500 flex items-center my-3">Blog</a>
+                </div>
+                <a href="" class="text-2xl text-gray-500 my-3">Careers</a>
+                <a href="" class="text-2xl text-gray-500 my-3">About</a>
+            </div>
+            <div>
+                <div class="w-[70%] h-[50px] text-gray-500 hover:text-black rounded-2xl flex items-center justify-center text-2xl my-7 mx-auto cursor-pointer">Login</div>
+                <div class="w-[70%] h-[50px] text-gray-500 hover:text-black border-1 border-solid border-black cursor-pointer rounded-2xl flex items-center justify-center text-2xl my-7 mx-auto">Register</div>
+            </div>
+        </aside>
+    </div>
 
     <script>
         const overlay = document.getElementById("overlay");
@@ -76,6 +108,10 @@
         const companyMenu = document.getElementById("companyMenu");
         const features = document.getElementById("features");
         const featuresMenu = document.getElementById("featuresMenu");
+        const desktopFeatures = document.getElementById("desktopFeatures");
+        const desktopFeaturesMenu = document.getElementById("desktopFeaturesMenu");
+        const desktopCompany = document.getElementById("desktopCompany");
+        const desktopCompanyMenu = document.getElementById("desktopCompanyMenu");
 
         cancelMenu.addEventListener("click", ()=>{
             menu.classList.toggle("hidden")
@@ -93,6 +129,14 @@
 
         company.addEventListener("click", ()=>{
             companyMenu.classList.toggle("hidden")
+        })
+
+        desktopFeatures.addEventListener("click", ()=>{
+            desktopFeaturesMenu.classList.toggle("hidden")
+        })
+
+        desktopCompany.addEventListener("click", ()=>{
+            desktopCompanyMenu.classList.toggle("hidden")
         })
     </script>
 </body>
